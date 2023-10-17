@@ -58,7 +58,6 @@ const posCommon = {
                 total: this.totalNumeric
             }
             if (this.tipNumeric > 0) data.tip = this.tipNumeric
-            if (this.tipPercent > 0) data.tipPercentage = this.tipPercent
             if (this.discountNumeric > 0) data.discountAmount = this.discountNumeric
             if (this.discountPercentNumeric > 0) data.discountPercentage = this.discountPercentNumeric
             return JSON.stringify(data)

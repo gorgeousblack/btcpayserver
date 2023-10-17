@@ -382,8 +382,7 @@ namespace BTCPayServer.Plugins.PointOfSale.Controllers
                             }
                             if (appPosData.Tip > 0)
                             {
-                                var tipFormatted = _displayFormatter.Currency(appPosData.Tip, settings.Currency, DisplayFormatter.CurrencyFormat.Symbol);
-                                receiptData.Add("Tip", appPosData.TipPercentage > 0 ? $"{appPosData.TipPercentage}% = {tipFormatted}" : tipFormatted);
+                                receiptData.Add("Tip", _displayFormatter.Currency(appPosData.Tip, settings.Currency, DisplayFormatter.CurrencyFormat.Symbol));
                             }
                             receiptData.Add("Total", _displayFormatter.Currency(appPosData.Total, settings.Currency, DisplayFormatter.CurrencyFormat.Symbol));
                         }

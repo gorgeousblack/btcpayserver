@@ -1913,7 +1913,6 @@ namespace BTCPayServer.Tests
             });
             s.GoToHome();
             //offline/external payout test
-
             var newStore = s.CreateNewStore();
             s.GenerateWallet("BTC", "", true, true);
             s.GoToStore(s.StoreId, StoreNavPages.PullPayments);
